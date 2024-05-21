@@ -21,6 +21,9 @@ jobs:
       with:
         compiler-setup: ${{ matrix.compilers }}
 
+    - name: "Install NetCDF"
+      run: sudo apt-get install libnetcdf-dev libnetcdff-dev
+
     - name: checkout-wrf_io
       uses: actions/checkout@v4
       with: 
